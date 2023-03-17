@@ -1,0 +1,52 @@
+@use 'abstracts/variables';
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/buttons';
+@use 'components/legend';
+@use 'components/modal';
+@use 'layout/header';
+@use 'layout/content';
+@use 'layout/cardgrid';
+
+body {
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    background-color:rgb(245, 239, 231)
+}
+
+.completed {
+    background-color: variables.$main-color;
+}
+.not-completed {
+    background-color: variables.$secondory-color;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.card-overlay{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.5);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.input{
+    width: 100%;
+}
+
+.input-error{
+    display: none;
+    color: rgb(238, 26, 26);
+}

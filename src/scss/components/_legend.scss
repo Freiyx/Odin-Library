@@ -1,0 +1,17 @@
+.legend {
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.legend-color-box{
+    width: 30px;
+    height: 30px;
+}
+
+.legend-field{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

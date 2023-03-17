@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+.header button {
+    @include mixins.button($color: variables.$main-color);   
+    font-size: 1.10em;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.modal-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+    button{
+        border-radius: 7px;
+        padding: 7px 20px;
+    }
+
+    .cancel-btn{
+        @include mixins.button($color: #fff);
+        color: black;
+        border: 1px solid rgb(173, 173, 173);
+    }
+
+    .submit-btn{
+        @include mixins.button($color: variables.$main-color);
+    }
+}
+
+.card-overlay button{
+    @include mixins.button($color: transparent);
+}

@@ -1,0 +1,6 @@
+@mixin button($color: variables.$main-color){
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: $color
+}

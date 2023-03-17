@@ -1,0 +1,17 @@
+.books-grid {
+    background-color: #fff;
+    /* width: min(90%, 1000px); */
+    width: clamp(374px, 90%, 1000px);
+    min-height: 90%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-rows: 250px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    height: 250px;
+    position: relative;
+}

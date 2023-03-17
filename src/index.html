@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="scss/main.scss">
+        <script src="https://kit.fontawesome.com/af41ac45ba.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <p>Freiyx's Library of Books</p>
+            <button id="addBookBtn">Add new book</button>
+        </div>
+        <div class="main-container">
+            <div class="legend">
+                <div class="legend-field">
+                    <div class="legend-color-box completed"></div>
+                    Completed
+                </div>
+                <div class="legend-field">
+                    <div class="legend-color-box not-completed"></div>
+                    Not Completed
+                </div>
+            </div>
+            <div class="books-grid">
+            </div>
+        </div>
+
+        <div id="bookModal">
+            <div class="modal-overlay close">
+
+            </div>
+            <div class="modal-card">
+                <div class="modal-card-header">
+                    <p>Add New Book</p>
+                    <button id="close" class="close"><i class="fa-solid fa-x fa-lg"></i></button>
+                </div>
+                <form id="add-form" class="form" method="POST" novalidate>
+                    <!-- <div class="modal-form"> -->
+                            <div>
+                                <label for="book-name">Book Name</label>
+                                <input class="input" name="book-name" id="book-name" type="text" placeholder="e.g. The Great Gatsby" required/>
+                                <p id='book-name-error' class='input-error'>(*)Required Field</p>
+                            </div>
+
+                            <div>
+                                <label for="author-name">Author Name</label>
+                                <input class="input" name="author-name" id="author-name" type="text" placeholder="e.g. F. Scott Fitzgerald" required/>
+                                <p id='author-name-error' class='input-error'>(*)Required Field</p>
+                            </div>
+                            
+                            <div>
+                                <label for="num-pages">Number of Pages</label>
+                                <input class="input" name="num-pages" id="num-pages" type="number" placeholder="e.g. 69" min="1" max="14999" required/>
+                                <p id='num-pages-error' class='input-error'>(*)Please ensure you entered a value below 15000</p>
+                            </div>
+                            
+                            <div>
+                                <label for="already-read">Already read?</label>
+                                <input type="checkbox" name="already-read" id="already-read" class="already-read" value="true"/>
+                            </div>
+                            
+                            <div class="modal-btns">
+                                <button class="cancel-btn close"type="button">Cancel</button>
+                                <button class="submit-btn" id="submitAddBtn">Add book</button>
+                            </div>
+                    <!-- </div> -->
+                </form>
+                
+        </div>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
